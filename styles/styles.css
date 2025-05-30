@@ -1,0 +1,225 @@
+@font-face {
+    font-family:"font1";
+    src: url(../fonts/font1.woff2fon);
+}
+@font-face {
+    font-family:"font2";
+    src: url(../fonts/font2.otf);
+}
+@font-face {
+    font-family:"font3";
+    src: url(../fonts/font3.otf);
+}
+@font-face {
+    font-family:"font4";
+    src: url(../fonts/SF-Pro-Display-Semibold.otf);
+}
+@font-face {
+    font-family:"font5";
+    src: url(../fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2);
+}
+@font-face {
+    font-family:"font6";
+    src: url(../fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7\ \(1\).woff2);
+}
+@font-face {
+    font-family:"font7";
+    src: url(../fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2);
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    display:grid;
+    grid-template-rows:auto auto 1fr auto;
+    grid-template-columns:100%;
+    min-height:100%;
+}
+
+*{
+    box-sizing:border-box;
+}
+.gradient {
+    overflow: auto;
+    
+    background-attachment:fixed;
+}
+.menu-close {
+    display:none;
+}
+.header-main {
+    display:flex;
+}
+.header-main {
+    width:100%;
+    height:48px;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99;
+    background-color:#fff;
+}
+.mobile-header-main {
+   width:100%;
+   height:48px;
+   display: flex;
+   justify-content: space-between;
+   align-items:center;
+
+}
+.mobile-header-right {
+    width:20%;
+    height:100%;
+    padding-right:20px;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap:20px;
+}
+.mobile-header-left {
+    width:84%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    padding-left:20px;
+    gap:20px;
+}
+#search-btn {
+    display:block;
+}
+.cart-icon {
+    position:relative;
+    display: inline-block;
+}
+#shoify-section-bar {
+    background: linear-gradient(80deg, #0f859b 0, #2da5bc 15%, #47c0d7 34%, #47c0d7 66%, #2da5bc 85%, #0f859b 100%);
+    z-index:4;
+   
+}
+.swiper {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+    position: relative;
+    overflow: hidden;
+    list-style:none;
+    padding:0;
+    z-index:1;
+}
+.swiper-wrapper {
+    transform:translate3d(0px,0,0);
+    position: relative;
+    width:100%;
+    height:100%;
+    z-index:1;
+    display:flex;
+    transition-property:transform;
+    box-sizing:content-box;
+}
+.announcement-bar-messege {
+    font-size:9px;
+    color:#ffffff;
+    padding:8px 0px;
+    letter-spacing:.1px;
+    font-family:"font2";
+    margin:0px;
+    text-align: center;
+}
+.copy-label {
+    margin-right:8px;
+    font-weight:bold;
+    display:inline-block;
+}
+.copy-btn {
+    background:#000;
+    border:12px;
+    cursor:pointer;
+    font-size:10px;
+    font-family: Arial;
+    padding:7px;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+   
+}
+img {
+   height:auto;
+}
+.mobile-image {
+   width:100%;
+
+}
+.wizzy-search-results-container {
+    margin-top:15px;
+    border:0;
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+.wizzy-search-results-wrapper {
+    position:relative;
+    display:flex;
+    display:none;
+    flex-wrap: wrap;
+    
+}
+.wizzy-search-results {
+    padding:0 15px;
+    margin-top:15px;
+    border-top:1px solid #e3e3e3;
+    display:flex;
+    flex-wrap: wrap;
+}
+.wizzy-search-results-list {
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    padding:0;
+    margin:0;
+    width: calc(50% - 5px);
+    column-gap:10px;
+    row-gap:20px;
+}
+.product {
+    min-height:230px;
+    object-fit:cover;
+    max-height:216px;
+    border-radius:0px;
+    
+}
+.title-wrapper {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+h2 {
+    font-size:15px;
+    color:#121212;
+    font-family:"font4";
+}
+.ptext {
+    font-size:11px;
+    color:#777;
+    position:relative;
+    bottom:11px;
+    font-family:"font2";
+}
+.new-price {
+    font-weight:700;
+    font-size:15px;
+    font-family:"font2";
+}
+.price {
+    transform:translateY(-20px);
+}
+@media screen and (min-width:375px) {
+    .announcement-bar-messege{
+        font-size:10px;
+        margin-left:5px;
+    }
+   
+}
+
