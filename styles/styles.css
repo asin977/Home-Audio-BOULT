@@ -78,7 +78,7 @@ body {
     gap:20px;
 }
 .mobile-header-left {
-    width:80%;
+    width:84%;
     height:100%;
     display:flex;
     justify-content: flex-start;
@@ -93,28 +93,10 @@ body {
     position:relative;
     display: inline-block;
 }
-.cart-count {
-    position:absolute;
-    top:-10px;
-    right:-10px;
-    background-color:black;
-    color:white;
-    border-radius:50%;
-    padding:0 5px;
-    font-size:12px;
-}
 #shoify-section-bar {
     background: linear-gradient(80deg, #0f859b 0, #2da5bc 15%, #47c0d7 34%, #47c0d7 66%, #2da5bc 85%, #0f859b 100%);
     z-index:4;
    
-}
-.sold-out-lable {
-    padding:5px 10px;
-    background: #1d1d1d;
-    color:#fff;
-    border-radius:10px;
-    font-size:12px;
-    font-family:"font2";
 }
 .swiper {
     margin-left:auto;
@@ -160,15 +142,8 @@ body {
     color:#fff;
     border:none;
     border-radius:4px;
+   
 }
-/* .text-star {
-    position:absolute;
-    top:0;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-} */
 img {
    height:auto;
 }
@@ -209,11 +184,48 @@ img {
     row-gap:20px;
 }
 .wizzy-search-results-container {
-    margin-top:12px;
+    margin-top: 15px;
     border: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+.wizzy-search-results-wrapper {
+    position: relative;
+    display: none; 
+    flex-wrap: wrap;
+}
+
+.wizzy-search-results {
+    padding: 0 15px;
+    margin-top: 15px;
+    border-top: 1px solid #e3e3e3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wizzy-search-results-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 10px; 
+    width: 100%;
+}
+
+.wizzy-search-results-list li.swiper-slide {
+    flex: 0 0 calc(50% - 10px);
+    box-sizing: border-box;
+}
+.product {
+    min-height:230px;
+    object-fit:cover;
+    max-height:216px;
+    border-radius:0px;
+    position:relative;
+    min-width:140px;
 }
 .fc-rating {
     background-color:#fff;
@@ -224,6 +236,20 @@ img {
 .str-rating {
     position:absolute;
     z-index:1
+}
+.cart-icon {
+    position:relative;
+    display: inline-block;
+}
+.cart-count {
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    background-color:black;
+    color:white;
+    border-radius:50%;
+    padding:0 5px;
+    font-size:12px;
 }
 .rates-star {
     padding:0px 7px;
@@ -247,57 +273,6 @@ p.desc {
     z-index:1;
     font-family:"font2";
 }
-.wizzy-search-results-wrapper {
-    position: relative;
-    display: none; 
-    flex-wrap: wrap;
-    min-height:230px;
-    object-fit:cover;
-    max-height:216px;
-    border-radius:0px;
-}
-
-.wizzy-search-results {
-    padding: 0 15px;
-    margin-top: 15px;
-    border-top: 1px solid #e3e3e3;
-    display: flex;
-    flex-wrap: wrap;
-    min-height:230px;
-    object-fit:cover;
-    max-height:216px;
-    border-radius:0px;
-}
-
-.wizzy-search-results-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-    column-gap: 10px;
-    row-gap: 20px;
-    min-height:230px;
-    object-fit:cover;
-    max-height:216px;
-    border-radius:0px;
-}
-
-.wizzy-search-results-list li.swiper-slide {
-    flex: 0 0 calc(50% - 10px);
-    box-sizing: border-box;
-}
-.product {
-    min-height:230px;
-    object-fit:cover;
-    max-height:216px;
-    border-radius:0px;
-    min-width:140px;
-    position:relative;
-    aspect-ratio:20/23;
-   
-}
 .title-wrapper {
     display:flex;
     justify-content:space-between;
@@ -307,6 +282,14 @@ h2 {
     font-size:15px;
     color:#121212;
     font-family:"font4";
+}
+.sold-out-lable {
+    padding:5px 10px;
+    background: #1d1d1d;
+    color:#fff;
+    border-radius:10px;
+    font-size:12px;
+    font-family:"font2";
 }
 .ptext {
     font-size:11px;
@@ -323,7 +306,23 @@ h2 {
 .price {
     transform:translateY(-20px);
 }
-
+.main-collection-text {
+    text-align: justify;
+}
+h3 {
+    letter-spacing: 0;
+    font-family:"font4";
+    
+}
+.product-collection {
+    padding-left:16px;
+    padding-right:16px;
+}
+.para {
+    font-size:15px;
+    color:#121212BF;
+     font-family:"font3";
+}
 @media screen and (min-width:375px) {
     .announcement-bar-messege{
         font-size:10px;
