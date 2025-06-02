@@ -114,20 +114,21 @@ body {
     width:100%;
     height:100%;
     z-index:1;
-    display:flex;
+    /* display:flex; */
     transition-property:transform;
     box-sizing:content-box;
 }
 .announcement-bar-messege {
-    font-size:9px;
+    font-size:10px;
     color:#ffffff;
-    padding:8px 0px;
+    padding:7px 0px;
     letter-spacing:.1px;
     font-family:"font2";
     margin:0px;
     text-align: center;
 }
 .copy-label {
+    margin-left:10px;
     margin-right:8px;
     font-weight:bold;
     display:inline-block;
@@ -394,6 +395,10 @@ h3 {
     padding-left:3px;
     margin-top:0px;
 }
+.footer-list-social {
+    font-size:25px;
+    background-color: #000;
+}
 .footer-block-heading {
     background:#47c0d7;
     -webkit-background-clip:text;
@@ -435,13 +440,9 @@ h3 {
 }
 .footer-content-bottom {
     border:none;
-    padding:10px;
+    padding:10px 0;
 }
-.list-social {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 .list-unstyled {
     list-style: none;
     margin:0;
@@ -450,10 +451,16 @@ h3 {
 .list-social-link img {
     height:45px;
 }
-.list-social-link 
-{
-    /* padding:8px; */
-    font-size:15px;
+.list-social-link  {
+    align-items: center;
+    display:flex;
+    padding:8px;
+    
+}
+.list-social {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 .terms-condition-urls {
     text-align: center;
@@ -528,6 +535,10 @@ h3 {
 }
 .footer-block {
     width:50%;
+    margin-bottom:-17px;
+}
+.faq-answer {
+    font-size:12px;
 }
 @media screen and (min-width:375px) {
     .announcement-bar-messege{
@@ -537,9 +548,14 @@ h3 {
    
 }
 
-@media screen and (max-width:780px) {
+@media screen and (max-width:768px) {
     .faq {
         padding-left:30px;
         padding-right:30px;
+    }
+    .head {
+        font-size:24px;
+        margin-bottom:24px;
+        padding:1px;
     }
 }
