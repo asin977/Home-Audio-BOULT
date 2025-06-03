@@ -15,7 +15,7 @@
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const selector = document.querySelector(".wizzy-common-select-selector");
     const dropdown = document.querySelector(".wizzy-common-select-options");
     const selectedItem = document.querySelector(".wizzy-common-select-selectedItem");
@@ -84,4 +84,62 @@
   });
   
   
- 
+  document.querySelectorAll("#product-grid li.swiper-slide").forEach(li => {
+    // Extract numeric price from .new-price span text like "₹1,999"
+    const priceText = li.querySelector(".new-price")?.textContent || "₹0";
+    const price = parseInt(priceText.replace(/[^\d]/g, ""), 10) || 0;
+    li.setAttribute("data-price", price);
+  
+    // Example static activity assignment, you can replace with real data
+    // For demo, assign 'Audiophile' if title includes 'Retroamp', else 'Other'
+    const title = li.querySelector(".fc-title h2")?.textContent || "";
+    const activity = title.toLowerCase().includes("retroamp") ? "Audiophile" : "Other";
+    li.setAttribute("data-activity", activity);
+  });
+
+
+async function fetchProducts() {
+  try {
+    const response = await fetch('products.json'); 
+    if (!response.ok) throw new Error('Network response was not ok');
+    const products = await response.json();
+    return products;
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return [];
+  }
+}
+
+
+const sortFunctions = {
+  
+  'Recommended': (a, b) => a.bestSellingRank - b.bestSellingRank,
+
+  'Best selling': (a, b) => a.bestSellingRank - b.bestSellingRank,
+
+  'Price, Low to High': (a, b) => a.priceNew - b.priceNew,
+
+  'Price, High to Low': (a, b) => b.priceNew - a.priceNew,
+
+  'Date, New to Old': (a, b) => new Date(b.dateAdded) - new Date(a.dateAdded),
+
+  'Date, Old to New': (a, b) => new Date(a.dateAdded) - new Date(b.dateAdded)
+};
+
+async function getSortedProducts(criteria) {
+  const products = await fetchProducts();
+
+  if (!sortFunctions[criteria]) {
+    console.warn('Unknown sort criteria, returning unsorted list');
+    return products;
+  }
+
+  return products.sort(sortFunctions[criteria]);
+}
+
+
+getSortedProducts('Price, Low to High').then(sortedProducts => {
+  console.log('Sorted products:', sortedProducts);
+
+});
+
