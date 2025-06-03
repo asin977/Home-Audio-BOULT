@@ -20,13 +20,12 @@
     const dropdown = document.querySelector(".wizzy-common-select-options");
     const selectedItem = document.querySelector(".wizzy-common-select-selectedItem");
   
-    // Find the plus sign icon (inserted via ::after or :after pseudo-element)
-    // So instead, we attach click to the entire selector and check if it's the icon area
+  
     selector.addEventListener("click", function (event) {
       const clickedX = event.offsetX;
       const selectorWidth = selector.offsetWidth;
   
-      // Assume last 30px of selector is the "plus" area (you can fine-tune this)
+      
       if (clickedX > selectorWidth - 30) {
         dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
       }
