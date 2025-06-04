@@ -13,46 +13,26 @@
     {
       "id":"42202215841862",
       "groupId": "7474672894021",
-      "title":"Boult Bassbox Q5",
-      "description":"High Quality Audio",
-      "priceNew": 999,
-      "priceOld": 2999,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/Q5_CLP.jpg?v=1741592240",
-      "dateAdded": "2024-04-20",
-      "bestSellingRank": 2
-    },{
-      "id":"42202215841863",
-      "groupId": "7474672894021",
-      "title":"Retro Amp x40",
-      "description":"40W Peak Output",
-      "priceNew": 2499,
-      "priceOld": 13999,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP_7_0d8597c4-cd5a-4b64-8890-741f52dfd06e.png?v=1726814768",
-      "dateAdded": "2024-04-20",
-      "bestSellingRank": 3
-    },{
-      "id":"42202215841864",
-      "groupId": "7474672894021",
       "title":"BassBox X180",
       "description":"180W Peak Output",
       "priceNew": 19999,
       "priceOld": 19999,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/180_W_1.png?v=1717394877",
       "dateAdded": "2024-04-20",
-      "bestSellingRank": 4
+      "bestSellingRank": 2
     },{
-      "id":"42202215841865",
+      "id":"42202215841863",
       "groupId": "7474672894021",
       "title":"BassBox X120",
       "description":"Wired Subwoofer,EQ modes",
       "priceNew": 11999,
       "priceOld": 11999,
-      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/bassbox-120.png?v=1717392237",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP.png?v=1724321738",
       "dateAdded": "2024-04-20",
-      "bestSellingRank": 5
+      "bestSellingRank": 3
     }
     ,{
-      "id":"42202215841866",
+      "id":"42202215841864",
       "groupId": "7474672894021",
       "title":"BassBox X60",
       "description":"Wired Subwoofer,EQ modes",
@@ -60,7 +40,47 @@
       "priceOld": 9999,
       "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP.png?v=1724321738",
       "dateAdded": "2024-04-20",
+      "bestSellingRank": 4
+    },{
+      "id":"42202215841865",
+      "groupId": "7474672894021",
+      "title":"BassBox X250",
+      "description":"250W Peak Output",
+      "priceNew": 24999,
+      "priceOld": 24999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/clp_x250_dbc0ee18-cf08-454a-bd4b-9a9a0b007b6c.png?v=1724736666",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 5
+    },{
+      "id":"42202215841866",
+      "groupId": "7474672894021",
+      "title":"BassBox X500",
+      "description":"500W Peak Output",
+      "priceNew":34999,
+      "priceOld": 34999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/Group_12894_69b1b2e1-7de7-4898-9f04-a52da5918ed8.png?v=1725108946",
+      "dateAdded": "2024-04-20",
       "bestSellingRank": 6
+    },{
+      "id":"42202215841867",
+      "groupId": "7474672894021",
+      "title":"BassBox X625",
+      "description":"Wired Subwoofer,EQ modes",
+      "priceNew": 39999,
+      "priceOld": 39999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP_4.png?v=1726725872",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 7
+    },{
+      "id":"42202215841868",
+      "groupId": "7474672894021",
+      "title":"Bassbox X30",
+      "description":"30W,LED Panel",
+      "priceNew": 5999,
+      "priceOld": 5999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/bassbox_30_CLP.jpg?v=1727443728",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 8
     }
   ]
   

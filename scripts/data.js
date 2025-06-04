@@ -29,4 +29,17 @@ document.addEventListener("DOMContentLoaded",function() {
 });
 
 const options = dropdown.querySelectorAll(".wizzy-common-select-option,.wizzy-common-select-optioned");
-    
+    options.forEach(option => {
+        option.addEventListener("click",function() {
+            selectedItem.textContent = this.textContent.trim();
+
+            options.forEach(opt => opt.classList.remove("selected"));
+            this.classList.add("selected");
+
+            dropdown.style.display = "none";
+        });
+    });
+
+    document.addEventListener("click",function(event) {
+        const isInside = selector.contains(event.target) 
+    })

@@ -831,11 +831,14 @@ h3 {
     }
 
     .container {
-        padding: 20px;
+        padding-left:20px;
+        padding-top:20px;
+
     }
 
     .wizzy-search-results {
         border-top: none;
+        margin-top:31px;
     }
 
     .wizzy-common-select-selectedItem {
