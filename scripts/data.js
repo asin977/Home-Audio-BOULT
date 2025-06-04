@@ -21,5 +21,12 @@ document.addEventListener("DOMContentLoaded",function() {
     selector.addEventListener("click",function(event) {
         const clickedX = event.offsetX;
         const selectorWidth = selector.offsetXWidth;
-    })
-})
+
+        if (clickedX > selectorWidth - 30) {
+            dropdown.style.display = dropdown.style.display === 'block' ? "none" : "block";
+        }
+    });
+});
+
+const options = dropdown.querySelectorAll(".wizzy-common-select-option,.wizzy-common-select-optioned");
+    
