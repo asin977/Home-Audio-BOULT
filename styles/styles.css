@@ -989,4 +989,7 @@ h3 {
     .wizzy-facet-body{
         display:none;
     }
+    .facet-block-product-value-tags-category {
+        border-bottom:none;
+    }
 }
