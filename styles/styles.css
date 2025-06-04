@@ -986,7 +986,7 @@ h3 {
     .wizzy-common-select-options {
         display:none;
     }
-    .wizzy-facet-list-item {
+    .wizzy-facet-body{
         display:none;
     }
 }
