@@ -85,13 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
   
   document.querySelectorAll("#product-grid li.swiper-slide").forEach(li => {
-    // Extract numeric price from .new-price span text like "₹1,999"
+    
     const priceText = li.querySelector(".new-price")?.textContent || "₹0";
     const price = parseInt(priceText.replace(/[^\d]/g, ""), 10) || 0;
     li.setAttribute("data-price", price);
   
-    // Example static activity assignment, you can replace with real data
-    // For demo, assign 'Audiophile' if title includes 'Retroamp', else 'Other'
+    
     const title = li.querySelector(".fc-title h2")?.textContent || "";
     const activity = title.toLowerCase().includes("retroamp") ? "Audiophile" : "Other";
     li.setAttribute("data-activity", activity);

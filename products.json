@@ -20,6 +20,68 @@
       "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/clp_10.png?v=1733749297",
       "dateAdded": "2024-04-20",
       "bestSellingRank": 2
+    },{
+      "id":"42202215841863",
+      "groupId": "7474672894021",
+      "title":"Partybox X80",
+      "description":"Partybox X80",
+      "priceNew":5499,
+      "priceOld": 19999,
+      "imageUrl":"https://cdn.shopify.com/s/files/1/0548/8849/7221/files/Group_1000007425.png?v=1728286930",
+      "dateAdded":"2024-04-20",
+      "bestSellingRank":3
+    },
+    {
+      "id":"42202215841864",
+      "groupId": "7474672894021",
+      "title":"Boult Bassbox Q5",
+      "description":"High Quality Audio",
+      "priceNew": 999,
+      "priceOld": 2999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/Q5_CLP.jpg?v=1741592240",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 4
+    },{
+      "id":"42202215841865",
+      "groupId": "7474672894021",
+      "title":"Retro Amp x40",
+      "description":"40W Peak Output",
+      "priceNew": 2499,
+      "priceOld": 13999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP_7_0d8597c4-cd5a-4b64-8890-741f52dfd06e.png?v=1726814768",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 5
+    },{
+      "id":"42202215841866",
+      "groupId": "7474672894021",
+      "title":"BassBox X180",
+      "description":"180W Peak Output",
+      "priceNew": 19999,
+      "priceOld": 19999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/180_W_1.png?v=1717394877",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 6
+    },{
+      "id":"42202215841867",
+      "groupId": "7474672894021",
+      "title":"BassBox X120",
+      "description":"Wired Subwoofer,EQ modes",
+      "priceNew": 11999,
+      "priceOld": 11999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/bassbox-120.png?v=1717392237",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 7
+    }
+    ,{
+      "id":"42202215841868",
+      "groupId": "7474672894021",
+      "title":"BassBox X60",
+      "description":"Wired Subwoofer,EQ modes",
+      "priceNew": 9999,
+      "priceOld": 9999,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0548/8849/7221/files/CLP.png?v=1724321738",
+      "dateAdded": "2024-04-20",
+      "bestSellingRank": 8
     }
   ]
   
