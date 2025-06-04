@@ -928,6 +928,7 @@ h3 {
     .wizzy-filters-facet-block {
         position: relative;
         border-bottom: 1px solid #e3e3e3;
+        padding:0;
     }
 
     .wizzy-facet-list-item {
@@ -952,7 +953,7 @@ h3 {
         border-radius:2px;
     }
     .wizzy-facet-head {
-        font-size:14px;
+        font-size:13px;
         font-weight:700;
         min-height:31px;
         text-transform: uppercase;
@@ -991,5 +992,10 @@ h3 {
     }
     .facet-block-product-value-tags-category {
         border-bottom:none;
+        display:none;
     }
+    .wizzy-common-select-container {
+        border-bottom: 1px solid #e3e3e3;
+    }
+    
 }
