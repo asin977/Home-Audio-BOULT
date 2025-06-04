@@ -352,6 +352,7 @@ h2 {
     position: relative;
     bottom: 11px;
     font-family: "font2";
+    text-wrap:nowrap;
 }
 
 .new-price {
