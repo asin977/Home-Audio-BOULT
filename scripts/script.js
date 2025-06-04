@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     facetBlocks.forEach(block => {
       const plusIcon = block.querySelector(".facet-head-right");
+      const minusIcon = block.querySelector(".facet-head-left");
       const facetBody = block.querySelector(".wizzy-facet-body");
   
       plusIcon.addEventListener("click", function (event) {
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  
   
   
   document.querySelectorAll("#product-grid li.swiper-slide").forEach(li => {
@@ -141,4 +143,137 @@ getSortedProducts('Price, Low to High').then(sortedProducts => {
   console.log('Sorted products:', sortedProducts);
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Get all price facet headers
+  const priceHeaders = document.querySelectorAll(".wizzy-facet-head");
+
+  priceHeaders.forEach(header => {
+    header.addEventListener("click", () => {
+      const facetBlock = header.closest(".wizzy-filters-facet-block");
+      const facetList = facetBlock.querySelector(".wizzy-facet-list");
+
+      if (facetList.style.display === "none" || !facetList.style.display) {
+        facetList.style.display = "block";
+      } else {
+        facetList.style.display = "none";
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const dropDownLink = document.querySelector(".dropDownActive");
+
+  if (dropDownLink) {
+    dropDownLink.addEventListener("click", (event) => {
+      event.preventDefault(); 
+
+      const dropdown = dropDownLink.closest("li").querySelector(".mobile-dropdown-child");
+
+      if (dropdown.style.display === "none" || !dropdown.style.display) {
+        dropdown.style.display = "block";
+        dropDownLink.querySelector(".arrowDown").style.transform = "rotate(180deg)";
+      } else {
+        dropdown.style.display = "none";
+        dropDownLink.querySelector(".arrowDown").style.transform = "rotate(0deg)";
+      }
+    });
+  }
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const lifestyleToggle = Array.from(document.querySelectorAll('.dropDownActive')).find(el =>
+    el.textContent.includes("Shop by lifestyle")
+  );
+
+  if (lifestyleToggle) {
+    lifestyleToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const dropdownItems = lifestyleToggle
+        .closest("li")
+        .querySelectorAll(".childDropDownA1, .childDropDownA2, .childDropDownA3, .childDropDownA4");
+
+      const arrow = lifestyleToggle.querySelector(".arrowDown");
+
+      dropdownItems.forEach(item => {
+        if (item.style.maxHeight) {
+          item.style.maxHeight = null;
+          item.style.opacity = 0;
+        } else {
+          item.style.maxHeight = item.scrollHeight + "px";
+          item.style.opacity = 1;
+        }
+      });
+
+      if (arrow) {
+        arrow.style.transform = arrow.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
+      }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const supportToggle = Array.from(document.querySelectorAll('.dropDownActive')).find(el =>
+    el.textContent.includes("Support & Warranty")
+  );
+
+  if (supportToggle) {
+    supportToggle.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const dropdownItems = supportToggle
+        .closest("li")
+        .querySelectorAll(".childDropDownA");
+
+      const arrow = supportToggle.querySelector(".arrowDown");
+
+      dropdownItems.forEach(item => {
+        if (item.style.maxHeight) {
+          item.style.maxHeight = null;
+          item.style.opacity = 0;
+        } else {
+          item.style.maxHeight = item.scrollHeight + "px";
+          item.style.opacity = 1;
+        }
+      });
+
+      if (arrow) {
+        arrow.style.transform = arrow.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
+      }
+    });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuIcon = document.getElementById("menu-icon");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (menuIcon && mobileMenu) {
+    menuIcon.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+
+    // Optional: Close menu if click outside
+    window.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+        mobileMenu.classList.remove("show");
+      }
+    });
+  } else {
+    console.warn("menu-icon or mobile-menu not found in DOM");
+  }
+});
+
+
+
+
+
+
 
