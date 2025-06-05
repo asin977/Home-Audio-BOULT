@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("show");
     });
 
-    // Optional: Close menu if click outside
+  
     window.addEventListener("click", (e) => {
       if (!mobileMenu.contains(e.target) && !menuIcon.contains(e.target)) {
         mobileMenu.classList.remove("show");

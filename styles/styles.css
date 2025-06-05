@@ -665,7 +665,288 @@ h3 {
     padding: 0;
     margin: 0;
 }
+.WI-mobile-nav-main {
+    width:100%;
+    height:calc(100% - 48px);
+    position:fixed;
+    top:48px;
+    left:0;
+    z-index:999;
+    overflow: hidden;
+    -webkit-transition:0.2s ease-out;
+    display:block;
+}
+.WI-mobileNav-in {
+    -webkit-transform:translateX(0%);
+    -webkit-transition: 0.2s ease-out;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    overflow: auto;
+}
+.WI-mobileNav-nav {
+    width:100%;
+    height:auto;
+}
+.mobile-menu {
+    list-style-type:none;
+    padding:0;
+    margin-top:10px;
+}
+.mobile-menu-link {
+    width:100%;
+    height:auto;
+    margin-bottom:10px;
+   
+}
+.mobile-menu-link a {
+    width:100%;
+    height:70px;
+    text-decoration:none;
+    font-size:13px;
+    color:#585858;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:0 20px;
+    transition:0.2s ease-out;
+    font-family: "font3";
+}
+.WI-mobileMenu-social {
+    width:100%;
+    height:70px;
+    background-color:#fff;
+    padding:0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    margin-bottom:-21px;
+}
+.mobile-dropdown-child  {
+    max-height:800px;
+    overflow: hidden;
+    transition:0.2s ease-out;
+    list-style-type:none;
+    padding:0;
+    margin-top:10px;
+    
+}
+.childDropDownA {
+    padding-left:50px;
+    font-weight:"font3";
+    background-color: #F6F6F6;
+}
+.mobile_dropdown-child-img {
+    width:60px;
+    height:60px;
+    object-fit: contain;
+    display:flex;
+}
+.navBadge {
+    padding:3px 6px;
+    background-color:#11acc8;
+    color:#fff;
+    border-radius:10px;
+    margin-left:3px;
+    font-size:8px;
+    padding-top: 5px;
+   
+} 
+.childDropDownA1 {
+    padding-left:50px;
+    font-weight:"font3";
+    color:#fff;
+    background-image:url('//www.boultaudio.com/cdn/shop/files/Rectangle_3088.png?v=1706593247');
+    position:center;
+    background-repeat:no-repeat;
 
+}
+.tag {
+    color:#fff;
+}
+.childDropDownA2 {
+    padding-left:50px;
+    font-weight:"font3";
+    color:#fff;
+    background-image:url('//www.boultaudio.com/cdn/shop/files/Rectangle_3089.png?v=1706593247');
+    position:center;
+    background-repeat:no-repeat;
+}
+.childDropDownA3 {
+    padding-left:50px;
+    font-weight:"font3";
+    color:#fff;
+    background-image:url('//www.boultaudio.com/cdn/shop/files/Rectangle_3091.png?v=1706593247');
+    position:center;
+    background-repeat:no-repeat;
+
+}
+.childDropDownA4 {
+    padding-left:50px;
+    font-weight:"font3";
+    color:#fff;
+    background-image:url('//www.boultaudio.com/cdn/shop/files/gaming_d1a63571-9c05-48d0-b6bd-3c72d05fd1bf.jpg?v=1705991201');
+    position:center;
+    background-repeat:no-repeat;
+
+}
+.WI-mobileMenu-login {
+    width:100%;
+    height:70px;
+    background-color:#1d1d1d;
+    color:#ffff;
+    font-family: "font3";
+}
+.kwik-pass-text {
+    font-size:13px;
+    color:#fff;
+    font-family:"font3";
+}
+
+.arrowDown {
+    transition: transform 0.3s ease;
+    margin-left: 5px;
+  }
+.mobile-dropdown-child {
+    display: none;
+    transition: all 0.3s ease;
+  }
+.menu {
+    display: none;
+}
+.list {
+    list-style-type:none;
+    padding:0;
+    margin-top:10px;
+}
+.childDropDownA1,
+.childDropDownA2,
+.childDropDownA3,
+.childDropDownA4 {
+  display: block;
+  overflow: hidden;
+  max-height:70;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.childDropDownA1,
+.childDropDownA2,
+.childDropDownA3,
+.childDropDownA4 {
+    display:none;
+}
+.WI-search-form {
+    width:100%;
+    height:auto;
+}
+.WI-search-in {
+    width:100%;
+    height:auto;
+    position:relative;
+    display:flex;
+    align-items: center;
+}
+.WI-search-icon {
+    width:30px;
+    height:30px;
+    border-radius:20px;
+    background-color:#fff;
+    position:absolute;
+    left:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.WI-search-main {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+    padding:10px;
+    backdrop-filter:blur(10px);
+    background-color:rgba(255,255,255,0.7);
+    -webkit-transition:0.2s ease-out;
+}
+.addBlur {
+    visibility: visible;
+    opacity:1;
+}
+.WI-search-form {
+    width:100%;
+    height:auto;
+}
+.WI-search-input {
+    width:100%;
+    padding:10px 50px;
+    border-radius:30px;
+    background-color:#eee;
+
+}
+.field-input {
+    flex-grow:1;
+    text-align: left;
+}
+.WI-search-cls-icon {
+    width:30px;
+    height:30px;
+    border-radius:20px;
+    background-color: #fff;
+    position:absolute;
+    right:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.wizzy-search-input {
+    position:static;
+    border:none;
+    padding:10px 50px;
+    font-size:18px;
+}
+.WI-mobile-nav-main {
+    display:none;
+}
+.wizzyautocomplete-wrapper {
+    display: flex;
+    top:62px;
+    right:10px;
+    max-height: calc(100%-62px);
+}
+.auto-complete {
+    display:grid;
+}
+.wizzy-autocomplete-suggestions {
+    background-color: #fff;
+    padding-top:15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    z-index:99;
+}
+.auto-complete-item-head {
+    margin-top:0;
+    padding:0 15px;
+    margin-bottom:7px;
+}
+
+.auto-complete-suggestions-list {
+    margin:0;
+    list-style-type:none;
+    padding:0;
+}
+.auto-complete-link {
+    border-bottom:1px solid #f7f7f7;
+    padding:15px;
+    position:relative;
+    display:flex;
+    color:#343434;
+    text-decoration:none;
+    font-weight:700;
+}
 @media screen and (min-width:375px) {
     .announcement-bar-messege {
         font-size: 10px;
@@ -747,6 +1028,11 @@ h3 {
     .facet-head-right:after {
         content: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2725 18.3896L10.2725 3.85432' stroke='%231D1D1D' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.14551 10.2725H17.6808' stroke='%231D1D1D' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
     }
+    
+    /* .facet-head-right {
+        content:url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.14453 10.2725H17.6799' stroke='%231D1D1D' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+        transform:unset;
+    } */
 
     .wizzy-search-results {
         padding: 20px;
@@ -1001,5 +1287,16 @@ h3 {
     .wizzy-common-select-container {
         border-bottom: 1px solid #e3e3e3;
     }
-    
+    .wizzy-summary-head {
+        font-size:16px;
+        margin:0;
+        text-overflow:ellipsis;
+        overflow: hidden;
+        margin-top:10px;
+        margin-left:15px;
+        font-family:"font3"
+    }
+    .wizzy-summary-head {
+        display:none;
+    }
 }
