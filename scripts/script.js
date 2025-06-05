@@ -186,93 +186,147 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const lifestyleToggle = Array.from(document.querySelectorAll('.dropDownActive')).find(el =>
-    el.textContent.includes("Shop by lifestyle")
-  );
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggles = document.querySelectorAll(".dropDownActive");
 
-  if (lifestyleToggle) {
-    lifestyleToggle.addEventListener("click", function (e) {
-      e.preventDefault();
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
 
-      const dropdownItems = lifestyleToggle
-        .closest("li")
-        .querySelectorAll(".childDropDownA1, .childDropDownA2, .childDropDownA3, .childDropDownA4");
+        const parentLi = toggle.closest(".mobile-menu-link");
+        const dropdown = parentLi.querySelector(".mobile-dropdown-child");
 
-      const arrow = lifestyleToggle.querySelector(".arrowDown");
-
-      dropdownItems.forEach(item => {
-        if (item.style.maxHeight) {
-          item.style.maxHeight = null;
-          item.style.opacity = 0;
-        } else {
-          item.style.maxHeight = item.scrollHeight + "px";
-          item.style.opacity = 1;
+        if (dropdown) {
+          parentLi.classList.toggle("open");
+          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         }
       });
-
-      if (arrow) {
-        arrow.style.transform = arrow.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
-      }
     });
-  }
-});
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const supportToggle = Array.from(document.querySelectorAll('.dropDownActive')).find(el =>
-    el.textContent.includes("Support & Warranty")
-  );
 
-  if (supportToggle) {
-    supportToggle.addEventListener("click", function (e) {
-      e.preventDefault();
+//   const lifestyleToggle = Array.from(document.querySelectorAll('.dropDownActive')).find(el =>
+//     el.textContent.includes("Shop by lifestyle")
+//   );
 
-      const dropdownItems = supportToggle
-        .closest("li")
-        .querySelectorAll(".childDropDownA");
+//   if (lifestyleToggle) {
+//     lifestyleToggle.addEventListener("click", function (e) {
+//       e.preventDefault();
 
-      const arrow = supportToggle.querySelector(".arrowDown");
+//       const dropdownItems = lifestyleToggle
+//         .closest("li")
+//         .querySelectorAll(".childDropDownA1, .childDropDownA2, .childDropDownA3, .childDropDownA4");
 
-      dropdownItems.forEach(item => {
-        if (item.style.maxHeight) {
-          item.style.maxHeight = null;
-          item.style.opacity = 0;
-        } else {
-          item.style.maxHeight = item.scrollHeight + "px";
-          item.style.opacity = 1;
+//       const arrow = lifestyleToggle.querySelector(".arrowDown");
+
+//       dropdownItems.forEach(item => {
+//         if (item.style.maxHeight) {
+//           item.style.maxHeight = null;
+//           item.style.opacity = 0;
+//         } else {
+//           item.style.maxHeight = item.scrollHeight + "px";
+//           item.style.opacity = 1;
+//         }
+//       });
+
+//       if (arrow) {
+//         arrow.style.transform = arrow.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
+//       }
+//     });
+//   }
+// });
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggles = document.querySelectorAll(".dropDownActive");
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const parentLi = toggle.closest(".mobile-menu-link");
+        const dropdownMenu = parentLi.querySelector(".mobile-dropdown-child");
+        const arrowIcon = toggle.querySelector(".arrowDown");
+
+        if (dropdownMenu) {
+          const isVisible = dropdownMenu.style.display === "block";
+          dropdownMenu.style.display = isVisible ? "none" : "block";
+
+          // Optional: rotate arrow
+          arrowIcon.style.transform = isVisible ? "rotate(0deg)" : "rotate(180deg)";
+          arrowIcon.style.transition = "transform 0.3s ease";
         }
       });
-
-      if (arrow) {
-        arrow.style.transform = arrow.style.transform === "rotate(180deg)" ? "rotate(0deg)" : "rotate(180deg)";
-      }
     });
-  }
-});
+  });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const menuIcon = document.getElementById("menu-icon");
-  const mobileMenu = document.getElementById("mobile-menu");
 
-  if (menuIcon && mobileMenu) {
-    menuIcon.addEventListener("click", () => {
-      mobileMenu.classList.toggle("show");
+
+  const menuIcon = document.getElementById('menu-icon');
+  const mobileNav = document.getElementById('WI-mobile-nav-body');
+
+  menuIcon.addEventListener('click', () => {
+    if (mobileNav.style.display === 'block') {
+      mobileNav.style.display = 'none';
+    } else {
+      mobileNav.style.display = 'block';
+    }
+  });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const copyButtons = document.querySelectorAll(".copy-btn");
+
+    copyButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const code = button.getAttribute("data-copy");
+
+      
+        navigator.clipboard.writeText(code).then(() => {
+        
+          const originalText = button.textContent;
+          button.textContent = "Copied✅";
+          button.disabled = true;
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+          }, 2000);
+        }).catch((err) => {
+          console.error("Failed to copy:", err);
+        });
+      });
     });
+  });
+ 
+  
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggles = document.querySelectorAll(".dropDownActive");
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const parentLi = toggle.closest(".mobile-menu-link");
+        const dropdown = parentLi.querySelector(".mobile-dropdown-child");
+
+        if (dropdown) {
+          parentLi.classList.toggle("open");
+          dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+      });
+    });
+  });
+
+
+
 
   
-    window.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && !menuIcon.contains(e.target)) {
-        mobileMenu.classList.remove("show");
-      }
-    });
-  } else {
-    console.warn("menu-icon or mobile-menu not found in DOM");
-  }
-});
-
-
-
+  
 
 
 
