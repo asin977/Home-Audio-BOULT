@@ -324,31 +324,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   document.addEventListener('DOMContentLoaded', () => {
-  
     document.querySelectorAll('.mobile-menu-link > a .arrowDown').forEach(arrow => {
-      arrow.style.cursor = 'pointer'; 
+      arrow.style.cursor = 'pointer';
   
       arrow.addEventListener('click', function(e) {
         e.preventDefault();
-        e.stopPropagation(); 
+        e.stopPropagation();
   
-        
         const menuLink = this.closest('.mobile-menu-link');
         if (!menuLink) return;
   
-      
         const submenu = menuLink.querySelector('.mobile-dropdown-child');
         if (!submenu) return;
   
-        
         if (submenu.style.display === 'block') {
           submenu.style.display = 'none';
+          this.classList.remove('rotated');  
         } else {
           submenu.style.display = 'block';
+          this.classList.add('rotated');      
         }
       });
     });
   });
+  
   
 
   

@@ -1001,7 +1001,15 @@ span.wizzy-autocomplete-label {
     box-sizing: border-box;
 
 }
-
+.arrowDown {
+    transition: transform 0.3s ease;
+    display: inline-block; /* make sure transform works */
+  }
+  
+  .arrowDown.rotated {
+    transform: rotate(180deg); /* rotate upside down */
+  }
+  
   
 /* cart clicking  */
 #root {
