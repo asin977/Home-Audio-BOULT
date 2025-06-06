@@ -802,11 +802,25 @@ h3 {
     background-color:#1d1d1d;
     color:#ffff;
     font-family: "font3";
+   
+}
+.mobile-nav__link  {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:30px;
+    padding:0 20px;
+    text-decoration:none;
+   
+}
+.arrow-right {
+    margin-top:12px;
 }
 .kwik-pass-text {
     font-size:13px;
     color:#fff;
     font-family:"font3";
+    margin-top:12px;
 }
 
 .arrowDown {
@@ -1157,7 +1171,9 @@ button {
 .WI-search-main{
     display: none;
 }
-
+#root {
+    display:none;
+}
 /* .menu {
     display: none;
 } */

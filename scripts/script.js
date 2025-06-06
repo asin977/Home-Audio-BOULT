@@ -295,14 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
             button.textContent = originalText;
             button.disabled = false;
           }, 2000);
-        }).catch((err) => {
-          console.error("Failed to copy:", err);
+        })
         });
       });
     });
-  });
- 
-  
   
   document.addEventListener("DOMContentLoaded", () => {
     const dropdownToggles = document.querySelectorAll(".dropDownActive");
